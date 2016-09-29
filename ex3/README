@@ -1,0 +1,33 @@
+orib
+308043447
+Ori Broda
+
+
+================================
+=  README for ex3: Retirement  =
+================================
+
+Usage: No need as ex3.py contains functions exclusively.	
+
+==================
+=  Description:  =
+==================
+
+Planning for the future: This program involves around pension
+planning and retirement funds.
+Contains functions that receive different inputs, 
+calculate data regarding our pension and return lists or tuples.
+ 
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+ex3.py   	Includes 6 functions for future retirement 			planning.		
+
+
+======================
+=  Special Comments  =
+======================
+

@@ -1,0 +1,64 @@
+orib
+308043447
+Ori Broda
+
+
+=============================
+=  README for ex7 =
+=============================
+
+
+usage: trends [-h] [--print_sentiment] [--run_doctests] [--draw_centered_map]
+[--draw_state_sentiments] [--draw_map_for_term]
+[--draw_map_by_hour] [--containing_state] [--file FILE]
+[--datadir DATADIR] [--tempdir TEMPDIR]
+[T [T ...]]
+
+Run Trends
+
+positional arguments:
+T Text to process
+
+optional arguments:
+-h, --help show help message and exit
+--print_sentiment, -p
+--run_doctests, -t
+--draw_centered_map, -d
+--draw_state_sentiments, -s
+--draw_map_for_term, -m
+--draw_map_by_hour, -b
+--containing_state, -c
+--file FILE, -f FILE
+--datadir DATADIR, -D DATADIR
+--tempdir TEMPDIR, -T TEMPDIR
+
+
+==================
+=  Description:  =
+==================
+
+In this project we use classes and data containers to create a modular 
+program that can be visualized by maps that the classes countain.
+This project involves around tweets (text strings) collected from different
+people posting all over the states of the U.S. We use different functions
+to process the tweets and geographical data that are provided.
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+tweet.py    	Contains the 'Tweet' class that can be used to create instances
+		of the type Tweet (tweets of people).
+geo_tweet_tools.py   Contains functions to calculate geographical data regarding
+		the states and tweets from different states.
+nation_mood.py  Contains functions to caculate data over tweets from states and
+		their degree of satisfaction of the people.
+		
+...
+
+
+======================
+=  Special Comments  =
+======================
+

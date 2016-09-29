@@ -1,0 +1,22 @@
+orib
+308043447
+Ori Broda
+
+=====================================
+=  README for ex1: Einstein Puzzle  =
+=====================================
+
+==================
+=  Description:  =
+==================
+
+A program that plays the Einstein puzzle for the user.
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+ex1.py    	Contains the Einstein puzzle. Asks the user for a
+                3 digit number then plays the puzzle.
+

@@ -1,0 +1,33 @@
+orib
+308043447
+Ori Broda
+
+
+================================
+=  README for ex5:  =
+================================
+
+Usage: No need as ex5.py contains functions exclusively.	
+
+==================
+=  Description:  =
+==================
+
+In this excersice we practice the use of recursions by learning how to rephrase them and use them.
+Contains 3 files with different recursion methods and goals.
+ 
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+NonRecursiveMystery.py   	A riddle to find what the recursion does and find the answer.	
+GetToTheZero.py			Finding out if a given puzzle is solvable using recursion. Contains 2 functions.
+AlignDNA.py  			Matching between DNA strands using recursion and finding it's similarity using
+				a regular method. Contains 2 functions.
+
+======================
+=  Special Comments  =
+======================
+

@@ -1,0 +1,248 @@
+orib	
+308043447	
+Ori Broda
+
+Acknowledgement: For this exercise i've consulted with netkiller.
+
+================================================
+README for ex8: Hash Functions & Data Structures
+================================================
+
+usage for the simulations in part 1:
+
+ simulations.py [-h] [--repeats REPEATS] [--minhashsize MINHASHSIZE]
+		 [--idlistsize IDLISTSIZE] [--toprime]
+		 [--function FUNCTION] [--sourcefile SOURCEFILE] 
+		 [--csvoutput] 
+
+-r: number of repeats 
+-m: minimal hash table size (M) 
+-n: list size (N) 
+-p: if assigned M will be the smallest prime number that is bigger than the given M
+-f: number of hash function to use 
+-s: use a source file for the parameters
+-c: prints the results in a more convenient form for analysis.
+
+=================================
+Part 1: Hash Functions
+=================================
+
+
+Function h0:
+
+
+The function returns the hash key '0' for each value.
+
+Advantages: 
+Fast calculation of the hash key.
+
+Drawbacks:
+Takes a long time to retrieve an item from the hash table.
+Takes a long time to check if the item is in the table.
+Takes a long time to insert items into the table.
+
+
+Function h1:
+
+
+The hash key this function returns is the ascii code of the first character 
+modulo the size of the table. 
+
+Advantages: 
+Fast calculation of the hash key.
+
+Drawbacks:
+Since there is a constant number of different ascii characters, the load factor for this function is high.
+
+
+Function h2:
+
+
+This function sums the ascii code of all characters in a string and returns the 
+sum modulo the size of the table as the hash key.
+
+Advantages: 
+Fewer collisions and a better load factor than h1 function.
+
+Drawbacks:
+If the string is long, it will take more time to calculate the sum resulting in a bad performance. 
+
+
+Function h3:
+
+
+The hash key returned by this function is the sum, of the ascii code of every character in
+the string multiplied by 128 (resembles bits: 2^7), modulo the size of the table.
+
+Advantages: 
+Fewer collisions and a better load factor than h2 function.
+
+Drawbacks:
+If the string is long, it will take more time to calculate the sum resulting in a bad performance. 
+
+
+
+Function h4:
+
+
+The function returns a random number between zero to table size-1.
+
+Advantages: 
+Calculating hash values relatively fast.
+
+Drawbacks:
+Impossible to determine load factor and chances of collision.
+Impossible to get values by specific hash keys. 
+
+
+Function h5:
+
+The function calculates the integer value of a given input and returns the value modulo table size.
+If the input is non-integer the function converts it to a string if possible and then converts to integer
+using 4 bits.
+
+Advantages:  
+Handy when comparing between strings since it produces similar keys for similar strings.
+If the value is integer, the calculation is pretty fast. 
+
+Drawbacks:
+If the value is not an integer, takes a long time to calculate.
+The same identical hash key can be produced for different integers, easy to be mistaken.
+
+
+Function h6:
+
+
+The function takes a string, moves the ascii code of the first character 7 bits to the right, multiply
+the previous sum and compare with the current character.
+
+Advantages: 
+Handy when comparing between strings since it produces similar keys for similar strings.
+
+Drawbacks:
+Takes a long time to calculate hash keys.
+
+
+Function h7:
+
+
+The function use MD5 function to take a key and then returns that key modulo the size of the has table.
+
+
+Drawbacks:
+If the input is not an integer, an error will be shown.
+
+
+Function h8:
+
+
+The function uses SHA-1 function to take a key and then returns that key modulo the size of the hash table.
+
+Drawbacks:
+If the input is not an integer, an error will be shown.
+
+
+Function h9:
+
+Does the same as h8:
+The function uses SHA-1 function to take a key and then returns that key modulo the size of the hash table.
+
+Advantages: 
+The hash keys are calculated pretty fast.
+
+Drawbacks:
+If the input is not an integer, an error will be shown.
+
+Best function:
+
+The best function is h9, and for integers since it causes less collisions than the 
+other functions when integers are applied on them.
+
+Impact of the different ratio of M and N:
+
+M - the size of the hash table, does not affect the function's performance. On the other hand,
+The number of items we want to insert into the table will affect the function's performance: The
+more we insert, the slower it will take to calculate the hash keys.
+As M increases though, the less collisions are to be expected since there is more space,
+but it will take more memory to use. 
+
+Usage of prime numbers:
+
+We can expect less collisions in some cases, when the size of the hash table is a prime number.
+I cannot figure out why it happens, but my guess is that since prime numbers are the "constructing bricks"
+of all natural numbers, the computations of the hash keys will be easier for some cases, causing 
+less collisions.
+
+==================
+Description:  
+==================
+
+In this exercise we practice the usage and implementation of dynamic data structures: hash
+functions and linked lists. It contains 3 parts:
+Part 1 : Hush functions - as described in this README.
+Part 2 : Functions regarding singly linked lists.
+Part 3 : Functions regarding a special linked list: Skipi list.
+
+=====================
+Complexity analysis:  
+=====================
+
+1. is_palindrome: Runs at O(n), assuming n is list size.
+is_palindrome uses the functions reverse, find_middle which both run at complexity of O(n) because
+each contains a while loop that goes over the list's nodes. is_palindrome itself contains 
+another while loop. All loops are independent and because we assume n is a huge number,
+a small number of while loops can be neglected and we result in O(n) complexity.
+
+Skipi List: Because we are interested in every node of the list, skipi list would not improve the
+performance of the function. 
+
+2. contains_cycle: Runs at O(n), assuming n is list size.
+Since the functions goes over all the nodes of the list, the complexity is O(n). 
+
+Skipi List: It's possible with skipi list to go to list tail and see if it's points on None or not.
+Therefore the task can be completed in complexity of O(1).
+
+3. have_intersection: Runs at O(n), assuming n is the size of the longer list (worst case).
+Since the functions goes over all the nodes in both lists, we use 2 while loops and for huge list
+length the complexity will be O(n).
+Skipi List: If we used skipi we could have used the attribute of the tail to get to the end of
+each list and then check if the last nodes are identical thus complete at O(1) complexity.
+
+4. reverse: Runs at O(n), assuming n is list size.
+Since reverse goes over all the nodes of the list, the complexity is O(n).
+Skipi List: Because we are interested in every node of the list, skipi list would not improve the
+performance of the function.  
+
+5. get_item: Runs at O(n), assuming n is the size of the list.
+get_item calculates the length of the list in order to determine the location of k, thus
+is implemented at O(n) complexity.
+Skipi List: If k is positive the function cannot improve the performace.
+However, if k is negative the tail of the list is known and we can skip backwards and get
+to the k'th node without going over all of the list thus reaching complexity of O(k).
+
+6. merge_lists: Runs at O(n), assuming n is the size of the longer list (worst case).
+The function goes over all of the nodes of the list, therefore the complexity is O(n).
+Skipi List: Because we are interested in every node of the list, skipi list would not improve the
+performance of the function.  
+
+7. merge_sort: Runs at O(nlog(n)), assuming n is list size.
+The function divides the list into two halves each time using find_middle and calling the recursion, thus
+reaching O(log(n)) complexity. Along with splitting in half, we sort the list's nodes in each call,
+and the sorting depands on the length of the list which is n. Therefore the complexity is O(nlog(n)).
+
+Skipi List:  Because we are interested in every node of the list, skipi list would not improve the
+performance of the function. 
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		         This file
+sllists_utilis.py	 Part 2 of this assignment. Contains functions regarding singly linked lists.
+skipi_list.py		 Part 3 of this assignment. Contains skipi list functions.
+
+=============================
+=  Special Comments =
+=============================
+
+I did not implement the bonus task: 'slice' in part 2.

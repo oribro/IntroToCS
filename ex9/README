@@ -1,0 +1,43 @@
+orib
+308043447	
+Ori Broda
+
+=============================
+=  README for ex9:  =
+=============================
+
+==================
+=  Description:  =
+==================
+
+This exercise practices the implementation of the huffman compression algorithm.
+The main goal is to take data and make it better to store and use in terms of memory and space.
+For this we use different functions to help us in the compression and decompression processes.
+
+==================
+
+Answers for the questions:
+1) Compression requires more memory than decompression because:
+When we compress data we need to build a compression method like we did in this exercise
+as we created the huffman tree and an encoding table. This usually takes much more memory
+and space because we use new memory blocks. When we decompress on the other hand, 
+The blocks are already used and the method exists, so the process will be easier
+and will require less resources.
+
+2) How we can compress without using much memory:
+We can use different compression algorithms. 
+Here we used Huffman to compress according to the
+incidence of characters. The frequent it gets, the less branches the tree will have and as a result,
+Less memory will be used for that compression. 
+There are other algorithms and some can be more efficient.
+Take for example the compression tools: Winrar and Winzip. We use them to compress files.
+Each one uses a different algorithm and different resources.
+Ziv-Lempel is good for decompressing data without losing some of it.
+And there are plenty other examples to how the algorithm changes the efficency of the compression.
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		  	This file   
+hzlib.py 		The file contains different functions for huffman algorithm implementation.

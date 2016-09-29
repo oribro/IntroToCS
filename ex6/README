@@ -1,0 +1,75 @@
+orib
+308043447
+Ori Broda
+
+
+================================
+=  README for ex6:  =
+================================
+
+Usage: No need as ex6.py contains functions exclusively.	
+
+==================
+=  Description:  =
+==================
+
+In this exercise we practice some advanced concepts of python
+programming, specifically list and dictionary comprehensions. Implementation is aimed to be
+efficient and short, as the file name 'oneliners' emphasizes.
+
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+oneliners.py	Contains 8 functions, aimed to be as short as possible, implementing 
+		various tasks in python programming (e.g list sorting).
+			
+
+=  Special Comments  =
+======================
+
+For the implementation of this exercise I used the following imports:
+
+Task 1: is_two_palindrome
+I did not use any import or special function for this task (I used slice to reverse the string though).
+
+Task 2: uni_sort
+I did not use any import for this task.
+I used the 'sorted' built-in function to sort the list and 'enumerate' to find duplicates.
+
+Task 3: dot_product
+I did not use any import for this task.
+I used the 'zip' built-in function to multiply every 2 values with the same index,
+and 'sum' to obtain the dot product.
+
+Task 4: list_intersection
+I did not use any import for this task.
+I used 'set' data structure to find the common integer between the lists.
+I used the 'list' and 'sorted' built-in functions to create a list and sort it.
+
+Task 5: list_difference
+I did not use any import for this task.
+I used 'set' data structure to find the integer unique to each list.
+I used the 'list' and 'sorted' built-in functions to create a list and sort it.
+
+Task 6: random_string
+I used the imports 'choice' (from module random) and 'ascii_lowercase' (from module string)
+1) choice- I used this import because we were asked to return a random string.
+This import allows me to choose a random low-case letter and attach it to a string using 'join'.
+2) ascii_lowercase- I used this constant to pick a random low case letter.
+This constant comprises of all the ascii lower-case letters: 'abcdefghijklmnopqrstuvwxyz'
+
+Task 7: word_mapper
+I used the import 'split' (from module re)
+split- I used this import because we were asked to discern between words and whitespaces in our
+mapping of words. Regex allows me to create a list of words from the input string using '\W+' and split.
+I also used the function 'lower' to convert the string to lower case as we were asked and 'count' to
+count every word's appearances.
+
+Task 8: gimme_a_value
+I didn't use any import or special function for this task.
+
+
+

@@ -1,0 +1,35 @@
+orib
+308043447
+Ori Broda
+
+
+================================
+=  README for ex4: Pensioners  =
+================================
+
+Usage: No need as ex4.py and battleship.py contain functions exclusively (like in ex3).	
+
+==================
+=  Description:  =
+==================
+
+The first part of this program (ex4.py) continues ex3. It involves around our life as pensioners. 
+Contains functions that receive different inputs, sort lists and perform search on them,
+calculate data regarding our pension and return different variables (lists, a function, etc..).
+The second part plays the battleship game (battleship.py):
+Includes 3 functions: For creating a board for the game, placing ships on it and attacking them.
+ 
+
+=============================
+=  List of submitted files: =
+=============================
+
+README		This file
+ex4.py   	Imitates our life after the retirement using functions from ex3.
+battleship.py	Plays the battleship game. 	
+
+======================
+=  Special Comments  =
+======================
+
+I used binary search for the implementation of live_like_a_king in ex4.py
